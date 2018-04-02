@@ -2,7 +2,10 @@
 
 In which I learn the basics of go.
 
-### Go Tour
+### Go Tour - Basics
 - hello
-- stringutils
+- stringutil
 - functions
+- variables
+- basic types
+- constants
