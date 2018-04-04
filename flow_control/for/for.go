@@ -3,29 +3,30 @@ package main
 import "fmt"
 
 func forBasicExample() {
+	// i:=0 is the init part of the for loop
+	// i < 10 is the condition part of the for loop
+	// i++ is the post part of the for loop
 	sum := 0
 	for i := 0; i < 10; i++ {
 		sum += i
 	}
-	// i:=0 is the init part of the for loop
-	// i < 10 is the condition part of the for loop
-	// i++ is the post part of the for loop
 	fmt.Println(sum)
 }
 
 func forWithoutPostPartTry() {
+	// i:=0 is the init part of the for loop
+	// i < 10 is the condition part of the for loop
 	sum := 0
 	for i := 0; i < 10; {
 		sum += i
 		i = i + 1
 	}
-	// i:=0 is the init part of the for loop
-	// i < 10 is the condition part of the for loop
-	// i++ is the post part of the for loop
 	fmt.Println(sum)
 }
 
 func forWhileExample() {
+	// Removing init and post parts of the for loop
+	// sum < 1000 is the condition part of the for loop
 	sum := 1
 	for sum < 1000 {
 		sum += sum
@@ -34,6 +35,7 @@ func forWhileExample() {
 }
 
 func forInfiniteLoopExample() {
+	// Removing init, condition, post. Creates an infinite loop.
 	for {
 		fmt.Println("This is an infinite loop, but breaks due to break stmt!")
 		break
