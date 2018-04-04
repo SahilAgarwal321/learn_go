@@ -9,3 +9,6 @@ In which I learn the basics of go.
 - variables
 - basic types
 - constants
+
+### Go Tour - Flow Control
+- for loop
