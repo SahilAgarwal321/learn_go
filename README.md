@@ -12,3 +12,6 @@ In which I learn the basics of go.
 
 ### Go Tour - Flow Control
 - for loop
+- if
+- switch
+- defer
