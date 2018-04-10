@@ -15,3 +15,7 @@ In which I learn the basics of go.
 - if
 - switch
 - defer
+
+### Go Tour - Go types
+- pointers
+- structs
