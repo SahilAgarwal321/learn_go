@@ -8,18 +8,30 @@ type vertex struct {
 	Z string
 }
 
-func basicStructExampleWithoutDeclaration() {
+func basicStructUseWithoutDeclaration() {
 	fmt.Println(vertex{0, 0, "Zeroth"})
 }
 
-func basicStructExample() {
-	var structExample vertex = vertex{1, 1, "First"}
-	fmt.Println(structExample)
+func structDeclarationExamples() {
+	var structExample1 vertex = vertex{1, 1, "First"} // has type vertex
+	fmt.Println("structExample1", structExample1)
+
+	var structExample2 = vertex{2, 2, "Second"} // has type vertex
+	fmt.Println("structExample2", structExample2)
+
+	structExample3 := vertex{3, 3, "Third"} // has type vertex
+	fmt.Println("structExample3", structExample3)
+
+	var structExample4 = vertex{X: 4, Z: "implicit"} // Y:0 is implicit
+	fmt.Println("structExample4", structExample4)
+
+	var structExample5 = vertex{} // X:0, Y:0, Z:''
+	fmt.Println("structExample5", structExample5)
+
 }
 
 func structExampleChangingValues() {
 	var structExample = vertex{2, 2, "Second"}
-	fmt.Println(structExample)
 
 	structExample.Z = "Changed!"
 	fmt.Println("Values of structExample are:")
@@ -28,28 +40,26 @@ func structExampleChangingValues() {
 
 func structExampleUsingPointers() {
 	structExample := vertex{3, 3, "Third"}
-	fmt.Println(structExample)
+	pointerToStructExample := &structExample // has type *vertex
 
-	// Now using pointers with structs -
-
-	pointerToStructExample1 := &structExample
-
-	// *pointerToStructExample1.Z = "Changed using a pointer"
+	// *pointerToStructExample.Z = "Changed using a pointer"
 	// Above gives error
-	pointerToStructExample1.Z = "Changed using a pointer"
+	pointerToStructExample.Z = "Changed using a pointer"
 	fmt.Println(structExample)
-	(*pointerToStructExample1).Z = "Changed using a pointer differently"
+	(*pointerToStructExample).Z = "Changed using a pointer differently"
 	fmt.Println(structExample)
 
+	var p = &vertex{1, 2, "pointers"}
+	fmt.Println(p)
+	fmt.Println(*p)
 }
 
 func main() {
-	basicStructExampleWithoutDeclaration()
+	basicStructUseWithoutDeclaration()
 	fmt.Println("----------------------------------------------------------")
-	basicStructExample()
+	structDeclarationExamples()
 	fmt.Println("----------------------------------------------------------")
 	structExampleChangingValues()
 	fmt.Println("----------------------------------------------------------")
 	structExampleUsingPointers()
-
 }
