@@ -21,5 +21,5 @@ func main() {
 	fmt.Println("Other examples -")
 	fmt.Println(python, java)
 	fmt.Println(intVariableExample, stringVariableExample, shortVariableExample)
-	// fmt.Printlin(abc) gives error
+	// fmt.Printlin(abc) //gives error
 }

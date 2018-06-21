@@ -35,16 +35,17 @@ func splitFloat(sum float32) (x, y float32) {
 func splitInt(sum int) (x, y int) {
 	x = sum * 1 / 2
 	var abc = 45
-	abc = abc
+	abc = abc + 10
 	y = sum - x
 	return
 }
 
 func main() {
-	fmt.Println("Function ``add()`` adds numbers 42, 13: ", add(42, 13))
+	fmt.Println("Function add() adds numbers 42, 13: ", add(42, 13))
 	fmt.Println(add2(42, 13))
 	var x, y int = 23, 54
 	x, y = swap(x, y)
+	// x, y = swapStrings(x, y) //Gives Error
 	fmt.Println("swap(23, 54) returns: ", x, y)
 	fmt.Println(swapStrings("How are you?", "Hi"))
 }
