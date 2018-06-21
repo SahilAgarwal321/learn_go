@@ -1,6 +1,6 @@
 # Learn Go
 
-In which I learn the basics of go.
+In which I learn the basics of go. This file keeps track of my progress and the order of programs.
 
 ### Go Tour - Basics
 - hello
@@ -19,3 +19,5 @@ In which I learn the basics of go.
 ### Go Tour - Go types
 - pointers
 - structs
+- array
+- slices
