@@ -14,6 +14,9 @@ func main() {
 	primes := [6]int{2, 3, 5, 7, 11, 13}
 	fmt.Println(primes)
 
-	exampleDefaultValues := [6]int{2, 3, 5, 7}
+	exampleDefaultValues := [6]int{2, 7}
 	fmt.Println(exampleDefaultValues)
+
+	var nilExample []int
+	fmt.Println(nilExample)
 }
