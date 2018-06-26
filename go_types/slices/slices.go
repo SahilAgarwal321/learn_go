@@ -17,6 +17,21 @@ func basicSlices() {
 
 	var slicedArray4 []int = arrayExample[:]
 	fmt.Println(slicedArray4)
+
+	sliceWithoutLength := []string{"Slice: with no", "length", "specified"}
+	fmt.Println(sliceWithoutLength)
+
+	sliceWithoutLengthUsingStruct := []struct {
+		i int
+		b bool
+	}{
+		{5, true},
+		{3, false},
+		{764, true},
+	}
+
+	fmt.Println(sliceWithoutLengthUsingStruct)
+
 }
 
 // Slices are like references to arrays
