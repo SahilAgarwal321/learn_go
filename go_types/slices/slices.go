@@ -58,8 +58,39 @@ func slicesAsPointers() {
 
 }
 
+// Function showcasing len() and cap() on slices.
+func sliceLengthAndCapacity() {
+	arrayExample := [6]int{0, 1, 2, 3, 4, 5}
+	fmt.Printf("%s\t len=%d cap=%d\t %v\n", "arrayExample", len(arrayExample), cap(arrayExample), arrayExample)
+	// printSlice("arrayExample", arrayExample) // gives error since in func def its (s []int) and not (s [6]int)
+
+	var slicedArray []int = arrayExample[1:4]
+	printSlice("slicedArray", slicedArray)
+
+	var slicedArray2 []int = arrayExample[1:]
+	printSlice("slicedArray2", slicedArray2)
+
+	printSlice("slicedArray2", slicedArray2[:3])
+	printSlice("arrayExample", arrayExample[:3])
+
+	var defaultExample [6]int
+	var nilExample []int
+
+	fmt.Printf("%s\t len=%d cap=%d\t %v\n", "defaultExample", len(defaultExample), cap(defaultExample), defaultExample)
+	printSlice("nilExample", nilExample)
+
+}
+
+// Prints slice name, it's length, capacity, values
+func printSlice(s string, x []int) {
+	fmt.Printf("%s\t len=%d cap=%d\t %v\n",
+		s, len(x), cap(x), x)
+}
+
 func main() {
 	basicSlices()
 	fmt.Println("---------------------------------------------")
 	slicesAsPointers()
+	fmt.Println("---------------------------------------------")
+	sliceLengthAndCapacity()
 }
